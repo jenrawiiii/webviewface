@@ -1,0 +1,24 @@
+<body>
+<header class="navbar">
+    <app-nav-bar></app-nav-bar>
+    <h1 class="form-header">รายชื่อผู้สนับสนุน</h1>
+    </header><div class="user-list">
+    <div class="user-container" *ngFor="let user of Listuser; let i = index">
+        <div class="user-detail">
+            <mat-icon>person</mat-icon> Name: {{user.name}}
+        </div>
+        <div class="user-detail">
+            <mat-icon>account_circle</mat-icon> Username: {{user.username}}
+        </div>
+        <div class="user-detail">
+            <mat-icon>email</mat-icon> Email: {{user.email}}
+        </div>
+        <div class="user-detail">
+            <mat-icon>phone</mat-icon> Phone: {{user.phone}}
+        </div>
+        <div class="user-detail">
+            <mat-icon>location_city</mat-icon> City: {{user.city}}
+        </div>
+    </div>
+</div>
+</body>

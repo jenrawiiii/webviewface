@@ -1,0 +1,482 @@
+body {
+    background-image: url('/assets/wow.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0; 
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.wel {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh; 
+}
+
+.last {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 10vh; 
+}
+
+.sa, .rang, .hea, .left, .login, .right, .first,.second,.third {
+    width: 50px;
+    height: 50px;
+}
+
+.sa, .hea  {
+    display: flex;
+    height: 10vh;
+    flex: 30%;
+}
+
+.rang {
+    display: flex;
+    height: 10vh;
+    flex: 40%;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.left, .right {
+    display: flex;
+    height: 70vh;
+    flex: 30%;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex: 40%;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid #060505;
+    border-radius: 10px;
+    place-self: center;
+    background-color: #bbd9fc;
+}
+
+.logo {
+    width: 150px; 
+    height: auto;
+    place-self: center;
+}
+
+.input-welcome {
+    margin-top: -50px;
+    width: 65%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%; 
+    justify-self: center;
+}
+
+.input-logo {
+    margin-top: -50px; /* ปรับตำแหน่งขึ้น */
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    justify-self: center;
+}
+
+.form-header {
+    text-align: center; 
+    margin-bottom: 50px; 
+    padding: 60px;
+    color: #050003;
+    font-weight: bold;
+}
+
+.input-button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* จัดให้เนื้อหามาตรงกลางในแนวนอน */
+}
+   
+.login-button {
+    width: 100px;
+    padding: 10px;
+    background-color: #3bbe53;
+    color: rgb(249, 249, 249);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.login-button:hover {
+    background-color: #2ed737; 
+}
+
+.register-button {
+    width: 100px;
+    padding: 10px;
+    background-color: #0e83f1;
+    color: rgb(249, 249, 249);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.register-button:hover {
+    background-color: #4cc7fc; 
+}
+
+.first , .third{
+    display: flex;
+    height: 10vh;
+    flex: 30%;
+}
+
+.second {
+    display: flex;
+    height: 10vh;
+    flex: 40%;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .logobar {
+    width: 50px; 
+    height: auto;
+    place-self: center;
+}
+  
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .logout-button button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button button:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media screen and (min-width: 414px) {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+    }
+    
+    .wel {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 70vh; 
+    }
+    
+    .last {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+    }
+    
+    .sa, .rang, .hea, .left, .login, .right, .first,.second,.third {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .sa, .hea  {
+        display: flex;
+        height: 15vh;
+        flex: 30px;
+    }
+    
+    .rang {
+        display: flex;
+        height: 10vh;
+        flex: 40px;
+        justify-content: center; 
+        align-items: center; 
+    }
+    
+    .left, .right {
+        display: flex;
+        height: 70vh;
+    }
+    
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        flex: 800px;
+        width: 100px;
+        margin: 0 auto;
+        border: 2px solid #060505;
+        border-radius: 10px;
+        place-self: center;
+        background-color: #bbd9fc;
+    }
+    
+    .logo {
+        width: 120px; 
+        height: auto;
+        place-self: center;
+    }
+    
+    .input-welcome {
+        margin-top: -50px;
+        width: 65px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 100px; 
+        justify-self: center;
+    }
+    
+    .input-logo {
+        margin-top: -60px; /* ปรับตำแหน่งขึ้น */
+        display: flex;
+        flex-direction: column;
+        width: 100px; 
+        justify-self: center;
+    }
+    
+    .form-header {
+        text-align: center; 
+        margin-bottom: 50px; 
+        padding: 60px;
+        color: #050003;
+        font-weight: bold;
+    }
+    
+    .input-button {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center; /* จัดให้เนื้อหามาตรงกลางในแนวนอน */
+    }
+       
+    .login-button {
+        width: 100px;
+        padding: 10px;
+        background-color: #3bbe53;
+        color: rgb(249, 249, 249);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    
+    .login-button:hover {
+        background-color: #2ed737; 
+    }
+    
+    .register-button {
+        width: 100px;
+        padding: 10px;
+        background-color: #0e83f1;
+        color: rgb(249, 249, 249);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    
+    .register-button:hover {
+        background-color: #4cc7fc; 
+    }
+    
+    .first , .third{
+        display: flex;
+        height: 10vh;
+        flex: 30px;
+    }
+    
+    .second {
+        display: flex;
+        height: 10vh;
+        flex: 40px;
+        justify-content: center; 
+        align-items: center; 
+    }
+    
+  }
+
+  @media screen and (min-width: 820px) {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+    }
+    
+    .wel {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 70vh; 
+    }
+    
+    .last {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+    }
+    
+    .sa, .rang, .hea, .left, .login, .right, .first,.second,.third {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .sa, .hea  {
+        display: flex;
+        height: 15vh;
+        flex: 30px;
+    }
+    
+    .rang {
+        display: flex;
+        height: 10vh;
+        flex: 40px;
+        justify-content: center; 
+        align-items: center; 
+    }
+    
+    .left, .right {
+        display: flex;
+        height: 70vh;
+    }
+    
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        flex: 800px;
+        width: 100px;
+        margin: 0 auto;
+        border: 2px solid #060505;
+        border-radius: 10px;
+        place-self: center;
+        background-color: #bbd9fc;
+    }
+    
+    .logo {
+        width: 150px; 
+        height: auto;
+        place-self: center;
+    }
+    
+    .input-welcome {
+        margin-top: -50px;
+        width: 100px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 100px; 
+        justify-self: center;
+    }
+    
+    .input-logo {
+        margin-top: -60px; /* ปรับตำแหน่งขึ้น */
+        display: flex;
+        flex-direction: column;
+        width: 100px; 
+        justify-self: center;
+    }
+    
+    .form-header {
+        text-align: center; 
+        margin-bottom: 60px; 
+        padding: 60px;
+        color: #050003;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    
+    .input-button {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center; /* จัดให้เนื้อหามาตรงกลางในแนวนอน */
+    }
+       
+    .login-button {
+        width: 100px;
+        padding: 15px;
+        background-color: #3bbe53;
+        color: rgb(249, 249, 249);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 40px;
+    }
+    
+    .login-button:hover {
+        background-color: #2ed737; 
+    }
+    
+    .register-button {
+        width: 100px;
+        padding: 10px;
+        background-color: #0e83f1;
+        color: rgb(249, 249, 249);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    
+    .register-button:hover {
+        background-color: #4cc7fc; 
+    }
+    
+    .first , .third{
+        display: flex;
+        height: 10vh;
+        flex: 30px;
+    }
+    
+    .second {
+        display: flex;
+        height: 10vh;
+        flex: 40px;
+        justify-content: center; 
+        align-items: center; 
+    }
+    
+}

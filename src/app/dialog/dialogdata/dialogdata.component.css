@@ -1,0 +1,41 @@
+.custom-dialog .mat-dialog-container {
+    width: 100px; 
+    height: 100px; 
+  }
+  
+  .close-button:hover {
+    background-color: hwb(0 1% 19%); 
+  }
+  
+  .close-button:active {
+    transform: scale(0.9); 
+  }
+  
+  .close-button {
+    position: absolute;
+    color: #ffffff;
+    top: 8px;
+    right: 8px;
+    background-color: hwb(9 0% 0%);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 9px 9px 1px 10px;
+    transition: transform 0.2s ease; 
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 250px; 
+  }
+  
+  .head {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  
+ 
+  

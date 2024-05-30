@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div class="large">
+        <div class="back-button">
+            <button [routerLink]="'/welcome'">Back</button>
+        </div>
+    </div>
+    <div class="big">
+        <div class="container">
+            <div class="sa"></div>
+            <div class="rang"></div>
+            <div class="hea">
+                <div class="logo-container">
+                    <img src="/assets/time.png" class="logo">
+                </div>
+                <h1 class="form-header">Form Register</h1>
+            </div>
+            <div class="wel">
+                <div class="left"></div>
+                <div class="welcome">
+                    <div class="input-welcome">
+                        <div class="input-group">
+                            <p>Firstname</p>
+                            <input #firstInput type="text" class="input-field" placeholder="กรุณากรอกข้อมูล" [(ngModel)]="first" required (ngModelChange)="validateFirst()">
+                            <span *ngIf="firstErrorMessage" class="error-message">{{ firstErrorMessage }}</span>
+                        </div>
+                        <div class="input-group">
+                            <p>Lastname</p>
+                            <input #lastInput type="text" class="input-field" placeholder="กรุณากรอกข้อมูล" [(ngModel)]="last" required (ngModelChange)="validateLast()">
+                            <span *ngIf="lastErrorMessage" class="error-message">{{ lastErrorMessage }}</span>
+                        </div>
+                        <div class="input-groupage">
+                            <p>Age</p>
+                            <input #ageInput type="text" class="input-field" maxlength="3" placeholder="กรุณากรอกข้อมูล" [(ngModel)]="age" required (ngModelChange)="validateAge()" (keypress)="numberOnly($event)">
+                            <span *ngIf="ageErrorMessage" class="error-message">{{ ageErrorMessage }}</span>
+                        </div>
+                        <div class="input-groupgen">
+                            <p>Gender</p>
+                            <select name="gen" class="select-field" [(ngModel)]="gender" required (ngModelChange)="validateGender()" #genderInput>
+                                <option value="" disabled selected hidden>กรุณาเลือกเพศ</option>
+                                <option value="man">Man</option>
+                                <option value="woman">Woman</option>
+                                <option value="LGBTQ+">LGBTQ+</option>
+                            </select>
+                            <span *ngIf="genderErrorMessage" class="error-message">{{ genderErrorMessage }}</span>
+                        </div>
+                        <div class="input-groupmail">
+                            <p>Email</p>
+                            <input type="text" class="input-fieldlong" placeholder="xxxxx@gmail.com" [(ngModel)]="email" required (ngModelChange)="validateEmail()">
+                            <span *ngIf="emailErrorMessage" class="error-message">{{ emailErrorMessage }}</span>
+                        </div>
+                        <div class="input-groupphone">
+                            <p>Phone</p>
+                            <input type="text" class="input-fieldlong" maxlength="10" placeholder="xxx-xxx-xxxx" [(ngModel)]="phone" required (ngModelChange)="validatePhone()" (keypress)="numberOnly($event)">
+                            <span *ngIf="phoneErrorMessage" class="error-message">{{ phoneErrorMessage }}</span>
+                        </div>
+                        <div class="input-grouppass">
+                            <p>Password</p>
+                            <input type="password" class="input-field" placeholder="กรุณากรอกรหัสผ่าน" [(ngModel)]="pass" required (ngModelChange)="validatePassword()">
+                            <span *ngIf="passwordErrorMessage" class="error-message">{{ passwordErrorMessage }}</span>
+                        </div>
+                        <div class="input-groupcon">
+                            <p>Confirm Password</p>
+                            <input type="password" class="input-field" placeholder="กรุณายืนยันรหัสผ่าน" [(ngModel)]="confirm_pass" required (ngModelChange)="validateConfirmPassword()">
+                            <span *ngIf="confirmPasswordErrorMessage" class="error-message">{{ confirmPasswordErrorMessage }}</span>
+                        </div>
+                        <div class="button-group">
+                            <button (click)="adduser()" id="submitButton" class="submit-button">Register</button>
+                            <button (click)="clearForm()" id="cancelButton" class="cancel-button">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+    <div class="last"></div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+body {
+  background-image: url('/assets/sky.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-size: 100% 100%;
+  margin: 0;
+  padding: 0; 
+  height: 100vh;
+}
+
+.input-field {
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border: 2px solid #f9f3f3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-right: 10px; /* เพิ่มระยะห่างระหว่าง input และปุ่ม */
+}
+
+.submit-button {
+    padding: 10px 20px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* สีเมื่อเลื่อนเมาส์ */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 12vh; 
+}
+
+.list-container {
+    margin-top: 20px;
+    text-align: center; 
+    margin-left: 50px;
+    margin-right: 60px;
+    
+}
+
+.mat-elevation-z8 {
+  overflow: auto;
+  width: 100%;
+}
+
+  .order {
+    font-weight: bold;
+  }
+
+  .timezone{
+    font-weight: bold;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th.mat-header-cell, td.mat-cell {
+    text-align: left;
+  }
+  
+  @media screen and (min-width: 414px) {
+    .input-field {
+      padding: 10px;
+      width: 200px;
+      height: 40px;
+      border: 2px solid #f9f3f3;
+      border-radius: 10px;
+      box-sizing: border-box;
+      margin-right: 10px; /* เพิ่มระยะห่างระหว่าง input และปุ่ม */
+  }
+  
+  .submit-button {
+      padding: 10px 20px;
+      height: 40px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+  
+  .submit-button:hover {
+      background-color: #45a049; /* สีเมื่อเลื่อนเมาส์ */
+  }
+  
+  .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: -30px;
+      margin-top: -40px;
+      height: 12vh; 
+  }
+  
+  .list-container {
+      margin-top: 20px;
+      text-align: center; 
+      margin-left: 50px;
+      margin-right: 60px;
+      
+  }
+  
+  .mat-elevation-z8 {
+    overflow: auto;
+    width: 100px;
+  }
+  
+    .order {
+      font-weight: bold;
+    }
+  
+    .timezone{
+      font-weight: bold;
+    }
+  
+    table {
+      width: 100px;
+    }
+  
+    th.mat-header-cell, td.mat-cell {
+      text-align: left;
+    }
+
+    .form-header {
+      text-align: center; 
+      margin-bottom: -40px; 
+      padding: 40px;
+      color: #111111;
+      font-weight: bold;
+      font-size: 25px;
+      border: 2px solid #fff4d4;
+      background-color: #fff4d4; 
+      width: 140px;
+      padding: 20px; 
+      margin: 30px 110px; 
+      border-radius: 10px; 
+  }
+    
+  }
+
+  @media screen and (min-width: 820px) {
+    .input-field {
+      padding: 10px;
+      width: 200px;
+      height: 40px;
+      border: 2px solid #f9f3f3;
+      border-radius: 10px;
+      box-sizing: border-box;
+      margin-right: 10px; /* เพิ่มระยะห่างระหว่าง input และปุ่ม */
+  }
+  
+  .form-header {
+    align-items: center;
+    margin-bottom: -40px; 
+    padding: 60px;
+    color: #111111;
+    font-weight: bold;
+    font-size: 30px;
+    border: 2px solid #fff4d4;
+    background-color: #fff4d4; 
+    width: 200px;
+    padding: 20px; 
+    margin: 30px 290px; 
+    border-radius: 10px; 
+}
+
+  .submit-button {
+      padding: 10px 20px;
+      height: 40px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+  
+  .submit-button:hover {
+      background-color: #45a049; /* สีเมื่อเลื่อนเมาส์ */
+  }
+  
+  .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh; 
+      margin-bottom: -20px;
+      margin-top: -30px;
+  }
+  
+  .list-container {
+      margin-top: 20px;
+      text-align: center; 
+      margin-left: 50px;
+      margin-right: 60px;
+      
+  }
+  
+  .mat-elevation-z8 {
+    overflow: auto;
+    width: 100px;
+  }
+  
+    .order {
+      font-weight: bold;
+    }
+  
+    .timezone{
+      font-weight: bold;
+    }
+  
+    table {
+      width: 100px;
+    }
+  
+    th.mat-header-cell, td.mat-cell {
+      text-align: left;
+    }
+    
+  }
+  

@@ -1,0 +1,30 @@
+<body>
+<header class="navbar">
+<app-nav-bar></app-nav-bar>
+</header>
+<h1 class="form-header">Time zone!</h1>
+<div class="container">
+    <input class="input-field" [(ngModel)]="Continent" placeholder="Enter Timezone">
+    <button class="submit-button" (click)="getAsiaData()">Submit</button>
+</div>
+
+<div class="list-container">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Column 1: Index -->
+      <ng-container matColumnDef="index">
+        <th mat-header-cell *matHeaderCellDef class="order"> ลำดับ </th>
+        <td mat-cell *matCellDef="let element; let i = index" > {{ element.index }}</td>  
+      </ng-container>
+  
+      <!-- Column 2: Timezone -->
+      <ng-container matColumnDef="timedata">
+        <th mat-header-cell *matHeaderCellDef class="timezone"> Timezone </th>
+        <td mat-cell *matCellDef="let element"> {{element.timedata}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[10, 15]" showFirstLastButtons></mat-paginator>
+</div>
+</body>

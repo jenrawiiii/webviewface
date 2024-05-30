@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the time zone</title>
+</head>
+<body>
+    <script> //เพิ่มเข้ามา sdk facebook
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'Messenger'));
+
+        window.extAsyncInit = () => {
+            // TODO: How to parse env file from here?
+            MessengerExtensions.getSupportedFeatures(function success(result) {
+                let features = result.supported_features;
+                if (features.includes("context")) {
+                    MessengerExtensions.getContext('679266294330678',
+                        function success(thread_context) {
+                            // success
+                            document.getElementById("psid").value = thread_context.psid;
+                        },
+                        function error(err) {
+                            // error
+                            console.log(err);
+                        }
+                    );
+                }
+            }, function error(err) {
+                // error retrieving supported features
+                console.log(err);
+            });
+            document.getElementById('submitButton').addEventListener('click', () => {
+                MessengerExtensions.requestCloseBrowser(function success() {
+                    console.log("Webview closing");
+                }, function error(err) {
+                    console.log(err);
+                });
+            });
+        };
+
+    </script>
+    <div class="big">
+        <div class="container">
+            <div class="sa"></div>
+            <div class="rang"></div>
+            <div class="hea"></div>
+        </div>
+        <div class="wel">
+            <div class="left"></div>
+            <div class="welcome">
+                <div class="input-welcome">
+                    <h1 class="form-header">Welcome to the time zone!</h1>
+                    <div class="input-logo">
+                        <img src="/assets/time.png" class="logo">
+                    </div>
+                    <div class="input-button">
+                        <button [routerLink]="'/login'" class="login-button">Login</button>
+                        <button [routerLink]="'/register'" class="register-button">Register</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+        <div class="last">
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+        </div>
+    </div>
+</body>
+</html>
