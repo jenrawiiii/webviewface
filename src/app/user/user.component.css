@@ -103,7 +103,7 @@ body {
     
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 410px) {
     .user-list {
         display: flex;
         flex-wrap: wrap;
@@ -146,7 +146,7 @@ body {
         background-color: #fff5d6; 
         width: 300px;
         padding: 20px; 
-        margin: 30px 240px; 
+        margin: 30px 100px; 
         border-radius: 10px; 
     }
 }
