@@ -24,13 +24,6 @@ body {
     margin-top: -10px;
 }
 
-.last {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 20vh; 
-}
-
 .form-header {
     text-align: center;
     margin-top: 30px;
@@ -42,20 +35,6 @@ body {
 .na, .two, .set, .aee, .login, .san, .first,.second,.third {
     width: 100px;
     height: 100px;
-}
-
-.na, .set {
-    display: flex;
-    height: 40vh;
-    flex: 30%;
-}
-
-.two {
-    display: flex;
-    height: 40vh;
-    flex: 40%;
-    justify-content: center; 
-    align-items: center; 
 }
 
 .aee, .san {
@@ -176,19 +155,10 @@ body {
     background-color: #20ce29; 
 }
 
-.first, .third {
-    display: flex;
-    flex: 30%;
-}
-
-.second {
-    display: flex;
-    flex: 40%;
-}
-
 .error-border {
     border: 1px solid red;
 }
+
 .error-message {
     color: red;
     font-size: 14px;
@@ -227,29 +197,12 @@ body {
         font-weight: bold;
     }
     
-    .na, .two, .set, .aee, .login, .san, .first,.second,.third {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .na, .set {
-        display: flex;
-        height: 30vh;
-        flex: 30px;
-    }
-    
     .two {
         display: flex;
         height: 30vh;
         flex: 40px;
         justify-content: center; 
         align-items: center; 
-    }
-    
-    .aee, .san {
-        display: flex;
-        height: 70vh;
-        flex: 90px;
     }
     
     .login {
@@ -279,6 +232,7 @@ body {
     .headpass {
         margin-bottom: 0px;
     }
+    
     .headpass mat-icon {
         margin-right: 50px;
         margin-left: 40px;
@@ -361,18 +315,6 @@ body {
         background-color: #20ce29; 
     }
     
-    .first, .third {
-        display: flex;
-        height: 10vh;
-        flex: 30px;
-    }
-    
-    .second {
-        display: flex;
-        height: 10vh;
-        flex: 40px;
-    }
-    
     .error-border {
         border: 1px solid red;
     }
@@ -382,6 +324,7 @@ body {
         margin-top: 5px;
         margin-left: 75px;
     }
+
     .back-button button {
         background-color: #f44336;
         color: #fff;
@@ -393,10 +336,6 @@ body {
         transform: translateY(30px);
         position: relative; 
         left: 20px;
-    }
-    
-    .back-button button:hover {
-        background-color: #d32f2f;
     }
 }
 
@@ -417,13 +356,6 @@ body {
         margin-top: -10px;
     }
     
-    .last {
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        height: 20vh; 
-    }
-    
     .form-header {
         text-align: center; 
         margin-top: 0px; 
@@ -431,30 +363,13 @@ body {
         color: #050003;
         font-weight: bold;
     }
-    
-    .na, .two, .set, .aee, .login, .san, .first,.second,.third {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .na, .set {
-        display: flex;
-        height: 30vh;
-        flex: 30px;
-    }
-    
+     
     .two {
         display: flex;
         height: 30vh;
         flex: 40px;
         justify-content: center; 
         align-items: center; 
-    }
-    
-    .aee, .san {
-        display: flex;
-        height: 70vh;
-        flex: 10px;
     }
     
     .login {
@@ -564,18 +479,6 @@ body {
     
     .login-button:hover {
         background-color: #20ce29; 
-    }
-    
-    .first, .third {
-        display: flex;
-        height: 10vh;
-        flex: 30px;
-    }
-    
-    .second {
-        display: flex;
-        height: 10vh;
-        flex: 40px;
     }
     
     .error-border {

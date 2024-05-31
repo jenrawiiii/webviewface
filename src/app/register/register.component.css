@@ -173,10 +173,6 @@ body {
     align-items: center;
   }
 
-  .large {
-    height: 10vh;
-  }
-  
   .container {
     width: 250px;
     height: auto;
@@ -190,10 +186,6 @@ body {
     align-items: center;
   }
   
-  .sa, .rang, .hea {
-    margin: 10px 0;
-  }
-  
   .logo-container {
     text-align: center;
   }
@@ -202,23 +194,9 @@ body {
     width: 100px;
     height: auto;
   }
-  
-  .wel {
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-  }
-  
+ 
   .left, .right {
     width: 20px;
-  }
-  
-  .welcome {
-    width: 170px;
-  }
-  
-  .input-welcome {
-    width: 150px;
   }
   
   .form-header {
@@ -275,19 +253,7 @@ body {
     margin-top: 10px;
   }
 
-  .input-groupmail{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .input-groupphone{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .input-grouppass{
+  .input-groupmail, .input-groupphone, .input-grouppass{
     display: flex;
     flex-direction: column;
     margin-top: 15px;
@@ -305,10 +271,6 @@ body {
     flex-direction: column;
   }
 
-  .last {
-    height: 10vh;
-  }
-
   .back-button button {
     background-color: #f44336;
     color: #fff;
@@ -321,10 +283,6 @@ body {
     position: relative; 
     left: 20px; 
 }
-
-.back-button button:hover {
-    background-color: #d32f2f;
-}
 }
 
 @media screen and (min-width: 820px) {
@@ -335,10 +293,6 @@ body {
     align-items: center;
   }
 
-  .large {
-    height: 10vh;
-  }
-  
   .container {
     width: 450px;
     height: auto;
@@ -352,10 +306,6 @@ body {
     align-items: center;
   }
   
-  .sa, .rang, .hea {
-    margin: 10px 0;
-  }
-  
   .logo-container {
     text-align: center;
   }
@@ -363,16 +313,6 @@ body {
   .logo {
     width: 100px;
     height: auto;
-  }
-  
-  .wel {
-    display: flex;
-    justify-content: space-between;
-    width: 450px;
-  }
-  
-  .left, .right {
-    width: 20px;
   }
   
   .welcome {
@@ -437,19 +377,7 @@ body {
     margin-top: 10px;
   }
 
-  .input-groupmail{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .input-groupphone{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .input-grouppass{
+  .input-groupmail, .input-groupphone, .input-grouppass{
     display: flex;
     flex-direction: column;
     margin-top: 15px;
@@ -460,14 +388,11 @@ body {
     flex-direction: column;
     margin-top: 20px;
   }
+
   .select-field {
     display: flex;
     width: 170px;
     flex-direction: column;
-  }
-
-  .last {
-    height: 10vh;
   }
 
   .back-button button {
@@ -483,9 +408,6 @@ body {
     left: 20px; 
 }
 
-.back-button button:hover {
-    background-color: #d32f2f;
-}
 }
   
   

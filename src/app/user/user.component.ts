@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Serviceapi } from '../serviceapi.service';
-import { response } from 'express';
 
 export interface User {
   name: string;

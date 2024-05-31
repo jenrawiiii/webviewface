@@ -118,11 +118,7 @@ body {
     width: 100px;
   }
   
-    .order {
-      font-weight: bold;
-    }
-  
-    .timezone{
+    .order, .timezone {
       font-weight: bold;
     }
   
@@ -147,8 +143,7 @@ body {
       padding: 20px; 
       margin: 30px 110px; 
       border-radius: 10px; 
-  }
-    
+  } 
   }
 
   @media screen and (min-width: 820px) {
@@ -187,11 +182,7 @@ body {
       cursor: pointer;
       font-size: 16px;
   }
-  
-  .submit-button:hover {
-      background-color: #45a049; /* สีเมื่อเลื่อนเมาส์ */
-  }
-  
+
   .container {
       display: flex;
       align-items: center;
@@ -206,7 +197,6 @@ body {
       text-align: center; 
       margin-left: 50px;
       margin-right: 60px;
-      
   }
   
   .mat-elevation-z8 {
@@ -214,11 +204,7 @@ body {
     width: 100px;
   }
   
-    .order {
-      font-weight: bold;
-    }
-  
-    .timezone{
+    .order, .timezone {
       font-weight: bold;
     }
   
@@ -229,6 +215,5 @@ body {
     th.mat-header-cell, td.mat-cell {
       text-align: left;
     }
-    
   }
   
