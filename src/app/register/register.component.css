@@ -18,152 +18,19 @@ body {
     height: 10vh;
   }
   
-  .container {
-    width: 60%;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #fff2c8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .sa, .rang, .hea {
-    margin: 10px 0;
-  }
-  
-  .logo-container {
-    text-align: center;
-  }
-  
-  .logo {
-    width: 100px;
-    height: auto;
-  }
-  
   .wel {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
-  
-  .left, .right {
-    width: 20%;
-  }
-  
+
   .welcome {
     width: 60%;
   }
   
-  .input-welcome {
-    width: 100%;
-  }
-  
-  .form-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .input-group {
-    margin-bottom: 15px;
-  }
-  
-  .input-field, .input-fieldlong, .select-field {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 12px;
-  }
-  
-  .button-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-  }
-  
-  .submit-button, .cancel-button {
-    width: 48%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .cancel-button {
-    background-color: #f44336;
-  }
-  
-  .submit-button:hover, .cancel-button:hover {
-    opacity: 0.8;
-  }
-
- .input-groupgen {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  .input-groupmail{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .input-groupphone{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .input-grouppass{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .input-groupcon{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-  .select-field {
-    display: flex;
-    width: 170px;
-    flex-direction: column;
-  }
-
-  .last {
+ .last {
     height: 10vh;
   }
-
-  .back-button button {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    padding: 20px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    transform: translateY(30px);
-    position: relative; /* กำหนดให้เป็นตำแหน่งสัมพันธ์ */
-    left: 20px; /* เคลื่อนที่ไปทางด้านขวา 20px */
-}
-
-.back-button button:hover {
-    background-color: #d32f2f;
-}
   
 @media screen and (min-width: 414px) {
   .big {
