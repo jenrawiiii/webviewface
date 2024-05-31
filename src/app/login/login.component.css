@@ -188,7 +188,7 @@ body {
      
      .login {
         display: flex;
-        height: 75vh;
+        height: 80vh;
         flex: 90px; 
         width: 400px;
         border: 2px solid #060505;
@@ -200,34 +200,30 @@ body {
         background-color: #aacef8;
     }
 
-    .heademail i {
-        margin-right: 50px;
-        margin-left: 25px;
-    }
-
     .heademail,  .headpass {
         margin-bottom: 5px;
+        margin-right: 190px;
     }
 
-    .headpass i {
+    .heademail mat-icon {
         margin-right: 50px;
-        margin-left: 50px;
+        margin-left: 5px;
     }
-    
-    .image {
-        width: 150px; 
-        height: auto;
+
+    .headpass mat-icon {
+        margin-right: 20px;
+        margin-left: 30px;
     }
     
     .input-fieldemail,  .input-fieldpass {
         padding: 10px;
-        width: 120px;
+        width: 140px;
         height: 40px;
         border: 2px solid #f9f3f3;
         border-radius: 10px;
         box-sizing: border-box;
-        margin-top: -40px;
-        margin-right: 40px;
+        margin-right: 20px;
+        margin-bottom: -10px;
     }
      
     .password {
@@ -248,14 +244,14 @@ body {
         background-color: #4CAF50; 
         border: none;
         color: white; 
-        padding: 15px 15px;
+        padding: 10px 15px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin-left: 80px;
         border-radius: 5px;
-        margin-top: 40px; /* จัดระยะห่างด้านบน */
+        margin-top: 30px; /* จัดระยะห่างด้านบน */
     }
     
     .error-border {
@@ -265,8 +261,8 @@ body {
     .error-message {
         color: red;
         font-size: 14px;
-        margin-top: 5px;
-        margin-left: 90px;
+        margin-top: 10px;
+        margin-left: 80px;
     }
     .back-button button {
         background-color: #f44336;
