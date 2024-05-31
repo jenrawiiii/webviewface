@@ -53,13 +53,13 @@ body {
     
     .two {
         display: flex;
-        height: 30vh;
+        height: 35vh;
         flex: 40px;
     }
     
     .login {
         display: flex;
-        height: 60vh;
+        height: 80vh;
         flex: 80px; 
         width: 290px;
         border: 2px solid #060505;
@@ -96,7 +96,7 @@ body {
         border-radius: 10px;
         box-sizing: border-box;
         margin: 0 auto;
-        margin-top: -30px;
+        margin-top: -40px;
         margin-right: 30px;
     }
 
