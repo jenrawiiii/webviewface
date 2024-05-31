@@ -22,7 +22,7 @@ body {
     height: 10vh; 
 }
 
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: 550px) {
     .container {
         display: flex;
         justify-content: space-around;

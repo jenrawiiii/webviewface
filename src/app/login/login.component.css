@@ -27,7 +27,7 @@ body {
     margin-bottom: 40px;  
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 550px) {
     .container {
         display: flex;
         justify-content: space-evenly;
@@ -260,7 +260,7 @@ body {
     .error-border {
         border: 1px solid red;
     }
-    
+
     .error-message {
         color: red;
         font-size: 14px;

@@ -54,7 +54,7 @@ body {
     margin: 30px 240px; 
     border-radius: 10px; 
 }
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 550px) {
     .user-list {
         display: flex;
         flex-wrap: wrap;
