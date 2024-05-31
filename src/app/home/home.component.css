@@ -146,7 +146,7 @@ body {
   } 
   }
 
-  @media screen and (min-width: 410px) {
+  @media screen and (min-width: 820px) {
     .input-field {
       padding: 10px;
       width: 200px;
