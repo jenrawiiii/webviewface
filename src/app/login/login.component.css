@@ -6,11 +6,6 @@ body {
     height: 100vh;
 }
 
-.na, .two, .set, .aee, .login, .san, .first,.second,.third {
-    width: 100px;
-    height: 100px;
-}
-
 .aee, .san {
     display: flex;
     height: 70vh;
@@ -29,19 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 40px;  /*การกำหนดระยะห่างด้านล่าง*/ 
-}
-
-.password {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.login-button {
-    margin: 30px 160px; 
-    border-radius: 5px;
-    margin-top: 30px; 
+    margin-bottom: 40px;  
 }
 
 @media screen and (min-width: 414px) {
@@ -55,7 +38,6 @@ body {
     .log {
         display: flex;
         justify-content: space-around; 
-        flex-wrap: nowrap;
         align-items: center; 
         height: 40vh; 
         margin-top: -10px;
@@ -82,8 +64,6 @@ body {
         width: 290px;
         border: 2px solid #060505;
         border-radius: 10px;
-        place-self: center;
-        justify-content: center;
         align-items: center;
         flex-direction: column;
         background-color: #aacef8;
@@ -106,10 +86,9 @@ body {
     .image {
         width: 190px; 
         height: auto;
-        margin-top: 0px;
     }
     
-    .input-fieldemail {
+    .input-fieldemail, .input-fieldpass {
         padding: 10px;
         width: 200px;
         height: 40px;
@@ -120,24 +99,7 @@ body {
         margin-top: -30px;
         margin-right: 30px;
     }
-    
-    .input-fieldpass {
-        width: 200px;
-        height: 40px;
-        padding: 10px;
-        border: 2px solid #f9f3f3;
-        border-radius: 10px;
-        box-sizing: border-box;
-        margin: 0 auto;
-        margin-top: -30px;
-        margin-right: 30px;
-    }
-    
-    .email {
-        display: flex;
-        margin-bottom: 40px;  /*การกำหนดระยะห่างด้านล่าง*/ 
-    }
-    
+
     .password {
         display: flex;
         flex-direction: column;
@@ -174,11 +136,7 @@ body {
         border-radius: 5px;
         margin-top: 30px; /* จัดระยะห่างด้านบน */
     }
-    
-    .login-button:hover {
-        background-color: #20ce29; 
-    }
-    
+     
     .error-border {
         border: 1px solid red;
     }
@@ -260,7 +218,7 @@ body {
         height: auto;
     }
     
-    .input-fieldemail {
+    .input-fieldemail,  .input-fieldpass {
         padding: 10px;
         width: 280px;
         height: 40px;
@@ -270,39 +228,14 @@ body {
         margin-top: -30px;
         margin-right: 40px;
     }
-    
-    .input-fieldpass {
-        width: 280px;
-        height: 40px;
-        padding: 10px;
-        border: 2px solid #f9f3f3;
-        border-radius: 10px;
-        box-sizing: border-box;
-        margin-top: -30px;
-        margin-right: 40px;
-    }
-    
-    .email {
-        display: flex;
-        margin-bottom: 40px;  /*การกำหนดระยะห่างด้านล่าง*/ 
-    }
-    
+     
     .password {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     
-    .input-grouphead {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        padding: 10px;
-        width: 400px; 
-        justify-self: center;
-    }
-    
-    .input-group {
+    .input-grouphead, .input-group {
         display: flex;
         flex-direction: column;
         padding: 10px;
@@ -324,13 +257,10 @@ body {
         margin-top: 40px; /* จัดระยะห่างด้านบน */
     }
     
-    .login-button:hover {
-        background-color: #20ce29; 
-    }
-    
     .error-border {
         border: 1px solid red;
     }
+    
     .error-message {
         color: red;
         font-size: 14px;
