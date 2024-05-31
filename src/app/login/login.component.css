@@ -232,6 +232,11 @@ body {
         justify-content: center;
     }
     
+    .image {
+        width: 190px; 
+        height: auto;
+    }
+    
     .input-grouphead, .input-group {
         display: flex;
         flex-direction: column;
@@ -251,7 +256,7 @@ body {
         font-size: 16px;
         margin-left: 80px;
         border-radius: 5px;
-        margin-top: 30px; /* จัดระยะห่างด้านบน */
+        margin-top: 40px; /* จัดระยะห่างด้านบน */
     }
     
     .error-border {
