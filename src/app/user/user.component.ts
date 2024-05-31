@@ -40,11 +40,11 @@ export class UserComponent {
     console.log(user[0].length);
     for(let i = 1 ; i <= user[0].length; i++){
       _data.push({
-        'name' : user[0][i-1]["name"],
-        'username': user[0][i-1]["username"], 
-        'email': user[0][i-1]["email"],
-        'phone': user[0][i-1]["phone"],
-        'city': user[0][i-1]["address"]["city"],
+        'name' : user[0][i-1]["name"] || "",
+        'username': user[0][i-1]["username"] || "", 
+        'email': user[0][i-1]["email"]|| "",
+        'phone': user[0][i-1]["phone"]|| "",
+        'city': user[0][i-1]["address"]["city"]|| "",
       })
     }
     this.Listuser = _data

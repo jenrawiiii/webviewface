@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   constructor(private router: Router) { }
 
-  title = 'register';
+  title = 'register'; 
   first: string = '';
   last: string = '';
   age: string = '';
@@ -128,7 +128,7 @@ export class RegisterComponent {
     this.errormessage = Null.length > 0 ? 'กรุณากรอกข้อมูล: ' + Null.join(', ') : '';
   }
 
-  adduser() {
+  adduser() { //เรียกใช้เมธอดตรวจสอบข้อมูลทั้งหมด
     this.validateFields();
     this.validateEmail();
     this.validatePassword();
