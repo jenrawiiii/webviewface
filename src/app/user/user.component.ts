@@ -33,8 +33,6 @@ export class UserComponent {
       console.log(response);
       this.User.push(response);
       this.convertUser(this.User);
-        // เรียกใช้งาน sendMessage() เมื่อได้รับข้อมูลผู้ใช้สำเร็จ
-        this.sendMessage();
     })
   }
 
@@ -54,26 +52,5 @@ export class UserComponent {
     this.Listuser = _data
     console.log(this.Listuser)
   }
-
-  sendMessage() {
-    // เรียกใช้ API ของ Messenger ส่งข้อความไปยังบอท
-    this.http.post<any>('https://graph.facebook.com/v20.0/me/messages', {
-      recipient: { id: '7550857141677622' }, // แทน sender_psid ด้วย PSID ที่ถูกต้อง
-      message: { text: 'สวัสดีค่ะ คุณต้องการให้ช่วยอะไร?' }
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'EAAJpygIudTYBOwTRBzgcrliVBJTZA1K7n7O7Ekj0vV3V7AJF5LD4J7O4j5H922hhypMD8ZB2N46HHdsFhZCNK2lwFoFMFcYXcOz4VB99kUILfGavQjx5ZCMfdFLZAtpFNBQz99xTcpTUNxxVevxX6QR4BNWP4ePvIGeq6gjhHICwQD97FZC9k7f54ijj4Ne2ZAg' // แทน YOUR_ACCESS_TOKEN ด้วย Access Token ที่ถูกต้อง
-      }
-    })
-    .subscribe(response => {
-      console.log('Message sent to bot:', response);
-      alert('ข้อความถูกส่งไปยังบอทแล้ว!');
-    }, error => {
-      console.error('Failed to send message:', error);
-      alert('มีข้อผิดพลาดเกิดขึ้นในการส่งข้อความ');
-    });
-  }
-  
 
 }
