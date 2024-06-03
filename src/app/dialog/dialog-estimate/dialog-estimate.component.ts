@@ -33,7 +33,9 @@ export class DialogEstimateComponent {
       responses: this.responses,
       psid: '7550857141677622' // คุณต้องหา PSID ของผู้ใช้จากที่ไหนสักที่ เช่น ผ่านการเข้าสู่ระบบหรือเก็บไว้ในแอปพลิเคชันของคุณ
     };
-  
+
+    console.log('Submitting survey data:', surveyData); // เพิ่มการล็อกข้อมูล
+
     this.http.post('https://be9a-171-97-97-20.ngrok-free.app/submit-survey', surveyData)
       .subscribe(response => {
         console.log('Survey submitted successfully', response);
@@ -49,7 +51,7 @@ export class DialogEstimateComponent {
         console.error('Error submitting survey', error);
       });
   }
-  
+
   sendConfirmationMessage(psid: string, message: string) {
     const PAGE_ACCESS_TOKEN = 'EAAJpygIudTYBOZBJ1UD6Dq4kjDx6UnfmJIER1C1OceT9SUdkD6vw0BU2PTM4jBIgSEGqD7kf7v6gcizFuWiMM69RuZBfqWmjHoNWPlDsvwbUJxqZBAzcZBZCTi7ukRESi0GLwawZAZCZCpuG57M8mtkMWa57IKAUcKrPyOffeTsEZC7h07ZCJzp1fE0ZC2G4JAGA2MS';
     const url = `https://graph.facebook.com/v20.0/me/messages?access_token=${PAGE_ACCESS_TOKEN}`;
@@ -58,8 +60,8 @@ export class DialogEstimateComponent {
       message: { text: message }
     };
 
-    console.log('Sending confirmation message with payload:', body);
+    console.log('Sending confirmation message with payload:', body); // เพิ่มการล็อกข้อมูล
+
     return this.http.post(url, body);
   }
 }
-
