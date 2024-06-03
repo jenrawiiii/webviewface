@@ -1,4 +1,4 @@
-<div class="dialog-container">
+<div class="dialog-container" *ngIf="isDialogOpen">
     <div class="dialog">
       <h2>แบบสอบถามความพึงพอใจในเว็บไซต์</h2>
       <form (ngSubmit)="onSubmit()">
@@ -12,3 +12,4 @@
       </form>
     </div>
   </div>
+  

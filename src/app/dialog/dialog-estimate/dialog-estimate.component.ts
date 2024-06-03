@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dialog-estimate',
@@ -27,47 +25,9 @@ export class DialogEstimateComponent {
 
   responses = Array(this.questions.length).fill('');
 
-  constructor(private http: HttpClient) {}
-
   onSubmit() {
-    const surveyData = {
-      responses: this.responses,
-      psid: '7550857141677622' // คุณต้องหา PSID ของผู้ใช้จากที่ไหนสักที่ เช่น ผ่านการเข้าสู่ระบบหรือเก็บไว้ในแอปพลิเคชันของคุณ
-    };
-
-    console.log('Submitting survey data:', surveyData); // เพิ่มการล็อกข้อมูล
-
-    this.http.post('https://be9a-171-97-97-20.ngrok-free.app/submit-survey', surveyData)
-      .subscribe({
-        next: (response) => {
-          console.log('Survey submitted successfully', response);
-          this.sendConfirmationMessage('7550857141677622', 'ขอบคุณที่ทำแบบพึงใจของเราค่ะ').subscribe({
-              next: (res) => {
-            console.log('Confirmation message sent successfully', res);
-            window.close();
-          },
-          error: (err) => {
-            console.error('Error sending confirmation message', err);
-            window.close();
-            }
-          });
-        },
-        error: (error) => {
-          console.error('Error submitting survey', error);
-        }
-      });
-  }
-
-  sendConfirmationMessage(psid: string, message: string): Observable<any> {
-    const PAGE_ACCESS_TOKEN = 'EAAJpygIudTYBOZBJ1UD6Dq4kjDx6UnfmJIER1C1OceT9SUdkD6vw0BU2PTM4jBIgSEGqD7kf7v6gcizFuWiMM69RuZBfqWmjHoNWPlDsvwbUJxqZBAzcZBZCTi7ukRESi0GLwawZAZCZCpuG57M8mtkMWa57IKAUcKrPyOffeTsEZC7h07ZCJzp1fE0ZC2G4JAGA2MS';
-    const url = `https://graph.facebook.com/v20.0/me/messages?access_token=${PAGE_ACCESS_TOKEN}`;
-    const body = {
-      recipient: { id: psid },
-      message: { text: message }
-    };
-
-    console.log('Sending confirmation message with payload:', body); // เพิ่มการล็อกข้อมูล
-
-    return this.http.post(url, body);
+    console.log('Responses:', this.responses);
+    this.isDialogOpen = false; // ปิดป๊อปอัพหลังจากกด submit
+    // เพิ่ม logic เพื่อจัดการการส่งฟอร์ม เช่น ส่งข้อมูลไปยัง server
   }
 }
