@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dialog-estimate',
@@ -37,22 +38,25 @@ export class DialogEstimateComponent {
     console.log('Submitting survey data:', surveyData); // เพิ่มการล็อกข้อมูล
 
     this.http.post('https://be9a-171-97-97-20.ngrok-free.app/submit-survey', surveyData)
-      .subscribe(response => {
-        console.log('Survey submitted successfully', response);
-        this.sendConfirmationMessage('7550857141677622', 'ขอบคุณที่ทำแบบพึงใจของเราค่ะ').subscribe(
-          (confirmationResponse) => {
-            console.log('Confirmation message sent successfully', confirmationResponse);
-          },
-          (error) => {
-            console.error('Error sending confirmation message', error);
-          }
-        );
-      }, error => {
-        console.error('Error submitting survey', error);
+      .subscribe({
+        next: (response) => {
+          console.log('Survey submitted successfully', response);
+          this.sendConfirmationMessage('7550857141677622', 'ขอบคุณที่ทำแบบพึงใจของเราค่ะ').subscribe({
+            next: (confirmationResponse) => {
+              console.log('Confirmation message sent successfully', confirmationResponse);
+            },
+            error: (error) => {
+              console.error('Error sending confirmation message', error);
+            }
+          });
+        },
+        error: (error) => {
+          console.error('Error submitting survey', error);
+        }
       });
   }
 
-  sendConfirmationMessage(psid: string, message: string) {
+  sendConfirmationMessage(psid: string, message: string): Observable<any> {
     const PAGE_ACCESS_TOKEN = 'EAAJpygIudTYBOZBJ1UD6Dq4kjDx6UnfmJIER1C1OceT9SUdkD6vw0BU2PTM4jBIgSEGqD7kf7v6gcizFuWiMM69RuZBfqWmjHoNWPlDsvwbUJxqZBAzcZBZCTi7ukRESi0GLwawZAZCZCpuG57M8mtkMWa57IKAUcKrPyOffeTsEZC7h07ZCJzp1fE0ZC2G4JAGA2MS';
     const url = `https://graph.facebook.com/v20.0/me/messages?access_token=${PAGE_ACCESS_TOKEN}`;
     const body = {
