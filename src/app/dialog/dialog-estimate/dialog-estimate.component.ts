@@ -31,20 +31,26 @@ export class DialogEstimateComponent {
   onSubmit() {
     const surveyData = {
       responses: this.responses,
-      psid: '7550857141677622'  // คุณต้องหา PSID ของผู้ใช้จากที่ไหนสักที่ เช่น ผ่านการเข้าสู่ระบบหรือเก็บไว้ในแอปพลิเคชันของคุณ
+      psid: '7550857141677622' // คุณต้องหา PSID ของผู้ใช้จากที่ไหนสักที่ เช่น ผ่านการเข้าสู่ระบบหรือเก็บไว้ในแอปพลิเคชันของคุณ
     };
-
+  
     this.http.post('https://be9a-171-97-97-20.ngrok-free.app/submit-survey', surveyData)
       .subscribe(response => {
         console.log('Survey submitted successfully', response);
-        
+        this.sendConfirmationMessage('7550857141677622', 'ขอบคุณที่ทำแบบพึงใจของเราค่ะ').subscribe(
+          (confirmationResponse) => {
+            console.log('Confirmation message sent successfully', confirmationResponse);
+          },
+          (error) => {
+            console.error('Error sending confirmation message', error);
+          }
+        );
       }, error => {
         console.error('Error submitting survey', error);
       });
-
+  
     this.isDialogOpen = false; // ปิด dialog หลังจากส่งฟอร์มเรียบร้อย
   }
-
   sendConfirmationMessage(psid: string, message: string) {
     const PAGE_ACCESS_TOKEN = 'EAAJpygIudTYBOZBJ1UD6Dq4kjDx6UnfmJIER1C1OceT9SUdkD6vw0BU2PTM4jBIgSEGqD7kf7v6gcizFuWiMM69RuZBfqWmjHoNWPlDsvwbUJxqZBAzcZBZCTi7ukRESi0GLwawZAZCZCpuG57M8mtkMWa57IKAUcKrPyOffeTsEZC7h07ZCJzp1fE0ZC2G4JAGA2MS';
     const url = `https://graph.facebook.com/v20.0/me/messages?access_token=${PAGE_ACCESS_TOKEN}`;
