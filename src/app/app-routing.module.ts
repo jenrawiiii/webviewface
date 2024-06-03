@@ -5,12 +5,14 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
+import { DialogEstimateComponent } from './dialog/dialog-estimate/dialog-estimate.component';
 
 const routes: Routes = [
   {path:'welcome',component:WelcomeComponent},
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent},
+  { path: 'dialog-estimate', component: DialogEstimateComponent },
   {path:'user',component:UserComponent},
   {path: '',redirectTo: 'welcome',pathMatch:'full'} 
 ];

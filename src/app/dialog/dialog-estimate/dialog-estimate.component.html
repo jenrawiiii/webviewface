@@ -1,0 +1,15 @@
+<div class="dialog-container">
+    <div class="dialog">
+      <h2>แบบสอบถามความพึงพอใจในเว็บไซต์</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group" *ngFor="let question of questions; let i = index">
+          <label>{{ question.label }}</label>
+          <select [(ngModel)]="responses[i]" name="response{{i}}" required>
+            <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  

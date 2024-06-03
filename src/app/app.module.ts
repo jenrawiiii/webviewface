@@ -21,6 +21,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserComponent } from './user/user.component';
+import { DialogEstimateComponent } from './dialog/dialog-estimate/dialog-estimate.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     DialogdataComponent,
     NavBarComponent,
-    UserComponent
+    UserComponent,
+    DialogEstimateComponent
   ],
   imports: [
     BrowserModule,

@@ -112,4 +112,5 @@ export class HomeComponent implements OnInit {
     return moment.parseZone(time).format("DD-MM-YYYY HH:mm:ss");
   }
 
+    title = 'website-satisfaction-survey';
   }

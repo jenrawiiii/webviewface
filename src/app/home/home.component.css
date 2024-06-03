@@ -215,5 +215,20 @@ body {
     th.mat-header-cell, td.mat-cell {
       text-align: left;
     }
+
+    .open-dialog-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .open-dialog-button:hover {
+      background-color: #0056b3;
+    }
   }
   
