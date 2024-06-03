@@ -48,8 +48,6 @@ export class DialogEstimateComponent {
       }, error => {
         console.error('Error submitting survey', error);
       });
-  
-    this.isDialogOpen = false; // ปิด dialog หลังจากส่งฟอร์มเรียบร้อย
   }
   sendConfirmationMessage(psid: string, message: string) {
     const PAGE_ACCESS_TOKEN = 'EAAJpygIudTYBOZBJ1UD6Dq4kjDx6UnfmJIER1C1OceT9SUdkD6vw0BU2PTM4jBIgSEGqD7kf7v6gcizFuWiMM69RuZBfqWmjHoNWPlDsvwbUJxqZBAzcZBZCTi7ukRESi0GLwawZAZCZCpuG57M8mtkMWa57IKAUcKrPyOffeTsEZC7h07ZCJzp1fE0ZC2G4JAGA2MS';
