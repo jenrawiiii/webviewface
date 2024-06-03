@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -25,9 +26,21 @@ export class DialogEstimateComponent {
 
   responses = Array(this.questions.length).fill('');
 
+  constructor(private http: HttpClient) {}
+
   onSubmit() {
-    console.log('Responses:', this.responses);
-    this.isDialogOpen = false; // Close the dialog after submit
-    // Add logic to handle form submission, e.g., send data to a server
+    const surveyData = {
+      responses: this.responses,
+      psid: '7550857141677622'  // คุณต้องหา PSID ของผู้ใช้จากที่ไหนสักที่ เช่น ผ่านการเข้าสู่ระบบหรือเก็บไว้ในแอปพลิเคชันของคุณ
+    };
+
+    this.http.post('http://localhost:3000/submit-survey', surveyData)
+      .subscribe(response => {
+        console.log('Survey submitted successfully');
+      }, error => {
+        console.error('Error submitting survey', error);
+      });
+
+    this.isDialogOpen = false; // ปิด dialog หลังจากส่งฟอร์มเรียบร้อย
   }
 }
